@@ -27,7 +27,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let scene = SCNScene(named: "art.scnassets/solid.dae")!
         
         // Set the scene to the view
-        sceneView.scene = scene
+        // sceneView.scene = scene
+        scene.rootNode.name = "solid"
+        sceneView.scene.rootNode.addChildNode(scene.rootNode)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +40,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        //画面中央の点から平面上の位置を算出
+        let results = sceneView.hitTest(sceneView.center, types: .estimatedHorizontalPlane)
+        
+        if let result = results.first {
+            // nodeを取得して位置を変更
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
