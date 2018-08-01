@@ -49,6 +49,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         if let result = results.first {
             // nodeを取得して位置を変更
+            self.sceneView.scene.rootNode.childNode(withName: "solid", recursively: false)?.position = SCNVector3(
+                result.worldTransform.columns.3.x,
+                result.worldTransform.columns.3.y,
+                result.worldTransform.columns.3.z
+            )
         }
     }
     
