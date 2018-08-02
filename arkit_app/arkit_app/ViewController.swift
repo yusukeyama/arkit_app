@@ -43,6 +43,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         //画面中央の点から平面上の位置を算出
