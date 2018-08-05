@@ -14,6 +14,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    var myNode : SCNNode?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,13 +50,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let results = sceneView.hitTest(sceneView.center, types: .estimatedHorizontalPlane)
         
         if let result = results.first {
+            myNode = self.sceneView.scene.rootNode.childNode(withName: "solid", recursively: false)
             // nodeを取得して位置を変更
-            self.sceneView.scene.rootNode.childNode(withName: "solid", recursively: false)?.position = SCNVector3(
+            myNode?.position = SCNVector3(
                 result.worldTransform.columns.3.x,
                 result.worldTransform.columns.3.y,
                 result.worldTransform.columns.3.z
             )
+            //モデルのスケーリング調整
+            myNode?.scale = SCNVector3(0.3,0.3,0.3)
         }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
