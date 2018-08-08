@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76911932211B1436006986D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76911931211B1436006986D7 /* MainViewController.swift */; };
 		76BD0B7B21108ABD00908CE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BD0B7A21108ABD00908CE5 /* AppDelegate.swift */; };
 		76BD0B7D21108ABD00908CE5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 76BD0B7C21108ABD00908CE5 /* art.scnassets */; };
 		76BD0B7F21108ABD00908CE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BD0B7E21108ABD00908CE5 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76911931211B1436006986D7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		76BD0B7721108ABD00908CE5 /* arkit_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arkit_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76BD0B7A21108ABD00908CE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76BD0B7C21108ABD00908CE5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				76BD0B8321108ABF00908CE5 /* Assets.xcassets */,
 				76BD0B8521108AC000908CE5 /* LaunchScreen.storyboard */,
 				76BD0B8821108AC000908CE5 /* Info.plist */,
+				76911931211B1436006986D7 /* MainViewController.swift */,
 			);
 			path = arkit_app;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76911932211B1436006986D7 /* MainViewController.swift in Sources */,
 				76BD0B7F21108ABD00908CE5 /* ViewController.swift in Sources */,
 				76BD0B7B21108ABD00908CE5 /* AppDelegate.swift in Sources */,
 			);
